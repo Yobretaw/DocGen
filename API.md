@@ -1497,5 +1497,3 @@ No description provided.
 |   Property   |  Description |  Schema |
 |:------------:|:------------:|:-------:|
 |  OperationId |              |  String |
-
-
