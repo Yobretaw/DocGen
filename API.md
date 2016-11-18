@@ -3,16 +3,16 @@
 * [Get Application](#get-application )
 * [Delete Application](#delete-application )
 * [Put Application](#put-application )
-* [Get ApplicationResources](#get-applicationresources )
+* [Applications ApplicationResources](#applications-applicationresources )
 * [Put Subscription](#put-subscription )
 * [Get Cluster](#get-cluster )
 * [Delete Cluster](#delete-cluster )
 * [Put Cluster](#put-cluster )
-* [Get Clusters](#get-clusters )
+* [Clusters Clusters](#clusters-clusters )
 * [Get FabricLocation](#get-fabriclocation )
 * [Delete FabricLocation](#delete-fabriclocation )
 * [Put FabricLocation](#put-fabriclocation )
-* [Get FabricLocationResources](#get-fabriclocationresources )
+* [FabricLocations FabricLocationResources](#fabriclocations-fabriclocationresources )
 * [PowerOff InfraVirtualMachine](#poweroff-infravirtualmachine )
 * [PowerOn InfraVirtualMachine](#poweron-infravirtualmachine )
 * [Shutdown InfraVirtualMachine](#shutdown-infravirtualmachine )
@@ -20,35 +20,39 @@
 * [Get InfraVirtualMachine](#get-infravirtualmachine )
 * [Delete InfraVirtualMachine](#delete-infravirtualmachine )
 * [Put InfraVirtualMachine](#put-infravirtualmachine )
-* [Get InfraVirtualMachines](#get-infravirtualmachines )
+* [InfraVirtualMachines InfraVirtualMachines](#infravirtualmachines-infravirtualmachines )
 * [Get IpPool](#get-ippool )
 * [Delete IpPool](#delete-ippool )
 * [Put IpPool](#put-ippool )
-* [Get IpPoolResources](#get-ippoolresources )
+* [IpPools IpPoolResources](#ippools-ippoolresources )
 * [Get LogicalNetwork](#get-logicalnetwork )
 * [Delete LogicalNetwork](#delete-logicalnetwork )
 * [Put LogicalNetwork](#put-logicalnetwork )
-* [Get LogicalNetworkResources](#get-logicalnetworkresources )
+* [LogicalNetworks LogicalNetworkResources](#logicalnetworks-logicalnetworkresources )
 * [Get LogicalSubnet](#get-logicalsubnet )
 * [Delete LogicalSubnet](#delete-logicalsubnet )
 * [Put LogicalSubnet](#put-logicalsubnet )
-* [Get LogicalSubnetResources](#get-logicalsubnetresources )
+* [LogicalSubnets LogicalSubnetResources](#logicalsubnets-logicalsubnetresources )
+* [Get MacAddressPool](#get-macaddresspool )
+* [Delete MacAddressPool](#delete-macaddresspool )
+* [Put MacAddressPool](#put-macaddresspool )
+* [MacAddressPools MacAddressPoolResources](#macaddresspools-macaddresspoolresources )
 * [Get FileShare](#get-fileshare )
 * [Delete FileShare](#delete-fileshare )
 * [Put FileShare](#put-fileshare )
-* [Get FileShareResources](#get-fileshareresources )
+* [FileShares FileShareResources](#fileshares-fileshareresources )
 * [Get Pool](#get-pool )
 * [Delete Pool](#delete-pool )
 * [Put Pool](#put-pool )
-* [Get PoolResources](#get-poolresources )
+* [Pools PoolResources](#pools-poolresources )
 * [Get StorageSubSystem](#get-storagesubsystem )
 * [Delete StorageSubSystem](#delete-storagesubsystem )
 * [Put StorageSubSystem](#put-storagesubsystem )
-* [Get StorageSystemResources](#get-storagesystemresources )
+* [StorageSubSystems StorageSystemResources](#storagesubsystems-storagesystemresources )
 * [Get Volume](#get-volume )
 * [Delete Volume](#delete-volume )
 * [Put Volume](#put-volume )
-* [Get VolumeResources](#get-volumeresources )
+* [Volumes VolumeResources](#volumes-volumeresources )
 
 [](#scaleup-application )
 ## ScaleUp Application
@@ -155,8 +159,8 @@ No description provided.
 * text/html
 
 
-[](#get-applicationresources )
-## Get ApplicationResources
+[](#applications-applicationresources )
+## Applications ApplicationResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/applications`
 ### Description
@@ -281,8 +285,8 @@ No description provided.
 * text/html
 
 
-[](#get-clusters )
-## Get Clusters
+[](#clusters-clusters )
+## Clusters Clusters
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/clusters`
 ### Description
@@ -382,8 +386,8 @@ No description provided.
 * text/html
 
 
-[](#get-fabriclocationresources )
-## Get FabricLocationResources
+[](#fabriclocations-fabriclocationresources )
+## FabricLocations FabricLocationResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations`
 ### Description
@@ -593,8 +597,8 @@ No description provided.
 * text/html
 
 
-[](#get-infravirtualmachines )
-## Get InfraVirtualMachines
+[](#infravirtualmachines-infravirtualmachines )
+## InfraVirtualMachines InfraVirtualMachines
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/infraVirtualMachines`
 ### Description
@@ -703,8 +707,8 @@ No description provided.
 * text/html
 
 
-[](#get-ippoolresources )
-## Get IpPoolResources
+[](#ippools-ippoolresources )
+## IpPools IpPoolResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/logicalNetworks/{logicalNetwork}/logicalSubnets/{logicalSubnet}/ipPools`
 ### Description
@@ -809,8 +813,8 @@ No description provided.
 * text/html
 
 
-[](#get-logicalnetworkresources )
-## Get LogicalNetworkResources
+[](#logicalnetworks-logicalnetworkresources )
+## LogicalNetworks LogicalNetworkResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/logicalNetworks`
 ### Description
@@ -916,8 +920,8 @@ No description provided.
 * text/html
 
 
-[](#get-logicalsubnetresources )
-## Get LogicalSubnetResources
+[](#logicalsubnets-logicalsubnetresources )
+## LogicalSubnets LogicalSubnetResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/logicalNetworks/{logicalNetwork}/logicalSubnets`
 ### Description
@@ -929,6 +933,110 @@ No description provided.
 |  resourceGroup  |  Path  |              |  String |    True   |          |
 |  fabricLocation |  Path  |              |  String |    True   |          |
 |  logicalNetwork |  Path  |              |  String |    True   |          |
+|   api-version   |  Query |              |  String |    True   |          |
+
+### Responses
+|  Status Code |  Description |  Schema |
+|:------------:|:------------:|:-------:|
+|      200     |      OK      |  Object |
+
+### Produces
+* application/json
+* text/json
+* text/html
+
+
+[](#get-macaddresspool )
+## Get MacAddressPool
+### Endpoint
+`GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/macAddressPools/{macAddressPool}`
+### Description
+No description provided.
+### Parameters
+|       Name      |  Type  |  Description |  Schema |  Required |  Default |
+|:---------------:|:------:|:------------:|:-------:|:---------:|:--------:|
+|   subscription  |  Path  |              |  String |    True   |          |
+|  resourceGroup  |  Path  |              |  String |    True   |          |
+|  fabricLocation |  Path  |              |  String |    True   |          |
+|  macAddressPool |  Path  |              |  String |    True   |          |
+|   api-version   |  Query |              |  String |    True   |          |
+
+### Responses
+|  Status Code |  Description |  Schema |
+|:------------:|:------------:|:-------:|
+|      200     |      OK      |  Object |
+
+### Produces
+* application/json
+* text/json
+* text/html
+
+
+[](#delete-macaddresspool )
+## Delete MacAddressPool
+### Endpoint
+`DELETE:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/macAddressPools/{macAddressPool}`
+### Description
+No description provided.
+### Parameters
+|       Name      |  Type  |  Description |  Schema |  Required |  Default |
+|:---------------:|:------:|:------------:|:-------:|:---------:|:--------:|
+|   subscription  |  Path  |              |  String |    True   |          |
+|  resourceGroup  |  Path  |              |  String |    True   |          |
+|  fabricLocation |  Path  |              |  String |    True   |          |
+|  macAddressPool |  Path  |              |  String |    True   |          |
+|   api-version   |  Query |              |  String |    True   |          |
+
+### Responses
+|  Status Code |  Description |    Schema   |
+|:------------:|:------------:|:-----------:|
+|      200     |      OK      |  No Content |
+
+### Produces
+* application/json
+* text/json
+* text/html
+
+
+[](#put-macaddresspool )
+## Put MacAddressPool
+### Endpoint
+`PUT:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/macAddressPools/{macAddressPool}`
+### Description
+No description provided.
+### Parameters
+|       Name      |  Type  |  Description |             Schema            |  Required |  Default |
+|:---------------:|:------:|:------------:|:-----------------------------:|:---------:|:--------:|
+|   subscription  |  Path  |              |             String            |    True   |          |
+|  resourceGroup  |  Path  |              |             String            |    True   |          |
+|  fabricLocation |  Path  |              |             String            |    True   |          |
+|  macAddressPool |  Path  |              |             String            |    True   |          |
+|   api-version   |  Query |              |             String            |    True   |          |
+|     resource    |  Body  |              |  [ArmResource](#armresource ) |    True   |          |
+
+### Responses
+|  Status Code |  Description |    Schema   |
+|:------------:|:------------:|:-----------:|
+|      200     |      OK      |  No Content |
+
+### Produces
+* application/json
+* text/json
+* text/html
+
+
+[](#macaddresspools-macaddresspoolresources )
+## MacAddressPools MacAddressPoolResources
+### Endpoint
+`GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/macAddressPools`
+### Description
+No description provided.
+### Parameters
+|       Name      |  Type  |  Description |  Schema |  Required |  Default |
+|:---------------:|:------:|:------------:|:-------:|:---------:|:--------:|
+|   subscription  |  Path  |              |  String |    True   |          |
+|  resourceGroup  |  Path  |              |  String |    True   |          |
+|  fabricLocation |  Path  |              |  String |    True   |          |
 |   api-version   |  Query |              |  String |    True   |          |
 
 ### Responses
@@ -1021,8 +1129,8 @@ No description provided.
 * text/html
 
 
-[](#get-fileshareresources )
-## Get FileShareResources
+[](#fileshares-fileshareresources )
+## FileShares FileShareResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/fileShares`
 ### Description
@@ -1128,8 +1236,8 @@ No description provided.
 * text/html
 
 
-[](#get-poolresources )
-## Get PoolResources
+[](#pools-poolresources )
+## Pools PoolResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/storageSubSystems/{storageSubSystem}/pools`
 ### Description
@@ -1233,8 +1341,8 @@ No description provided.
 * text/html
 
 
-[](#get-storagesystemresources )
-## Get StorageSystemResources
+[](#storagesubsystems-storagesystemresources )
+## StorageSubSystems StorageSystemResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/storageSubSystems`
 ### Description
@@ -1343,8 +1451,8 @@ No description provided.
 * text/html
 
 
-[](#get-volumeresources )
-## Get VolumeResources
+[](#volumes-volumeresources )
+## Volumes VolumeResources
 ### Endpoint
 `GET:/subscriptions/{subscription}/resourceGroups/system/providers/Microsoft.Fabric.Admin/fabricLocations/{fabricLocation}/storageSubSystems/{storageSubSystem}/pools/{pool}/volumes`
 ### Description
@@ -1389,3 +1497,5 @@ No description provided.
 |   Property   |  Description |  Schema |
 |:------------:|:------------:|:-------:|
 |  OperationId |              |  String |
+
+
