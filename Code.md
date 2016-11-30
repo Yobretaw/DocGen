@@ -134,13 +134,11 @@ public static void Register(HttpConfiguration config)
     {
         public NetworkingServiceSetup(HttpConfiguration config)
         {
-            // Configure the formatters so we don't output XML
-            config.Formatters.ConfigureDefaultResourceProviderFormatters();
-            
+            /* Your configuration goes here */
             ...
             
             /* Call SwaggerGen */
-            `**`var swaggerSpec = new SwaggerGen(config).GenerateSwagger();`**`
+            var swaggerSpec = new SwaggerGen(config).GenerateSwagger();
             ...
         }
     }
