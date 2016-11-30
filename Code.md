@@ -170,3 +170,72 @@ public class LogicalSubnetResourceController : ApiController
     }
 }
 ```
+
+```json
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ProductAPI"
+  },
+  "host": "localhost:9000",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/product/{id}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "operationId": "Product_GetProduct",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "ref": "#/definitions/Product"
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Product": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Category": {
+          "type": "string"
+        },
+        "Price": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    }
+  }
+}
+
+```
