@@ -80,15 +80,16 @@ namespace Fabric.ResourceProvider.NetworkingService.Controllers
 ```powershell
 PS C:\> Get-LogicalSubnet -LogicalSubnetName "f8f67956-3906-4303-94c5-09cf91e7e311"
 
-    Id         : /subscriptions/B6940E9A-5969-41EC-B6B1-C3575D19F067/resourceGroups/s
-                 ystem/providers/Microsoft.Fabric.Admin/fabricLocations/local/logical
-                 Networks/f8f67956-3906-4303-94c5-09cf91e7e311
-    Name       : f8f67956-3906-4303-94c5-09cf91e7e311
-    Type       : Microsoft.Fabric.Admin/fabricLocations/logicalNetworks
-    Location   : local
-    Tags       : {}
-    Properties : Microsoft.AzureStack.FabricResourceProvider.ClientModel.LogicalNetwo
-                 rk
+Id         : /subscriptions/B6940E9A-5969-41EC-B6B1-C3575D19F067/resourceGroups/s
+             ystem/providers/Microsoft.Fabric.Admin/fabricLocations/local/logical
+             Networks/f8f67956-3906-4303-94c5-09cf91e7e311
+Name       : f8f67956-3906-4303-94c5-09cf91e7e311
+Type       : Microsoft.Fabric.Admin/fabricLocations/logicalNetworks
+Location   : local
+Tags       : {}
+Properties : Microsoft.AzureStack.FabricResourceProvider.ClientModel.LogicalNetwo
+             rk
+
 ```
 
 
