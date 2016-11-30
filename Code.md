@@ -174,25 +174,16 @@ public class LogicalSubnetResourceController : ApiController
 ```json
 {
   "swagger": "2.0",
-  "info": {
-    "title": "ProductAPI"
-  },
+  "info": { "title": "ProductAPI" },
   "host": "localhost:9000",
-  "schemes": [
-    "http"
-  ],
+  "schemes": [ "http" ],
   "paths": {
     "/api/product/{id}": {
       "get": {
-        "tags": [
-          "Product"
-        ],
+        "tags": [ "Product" ],
         "operationId": "Product_GetProduct",
         "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json"
-        ],
+        "produces": [ "application/json" ],
         "parameters": [
           {
             "name": "id",
@@ -219,20 +210,10 @@ public class LogicalSubnetResourceController : ApiController
     "Product": {
       "type": "object",
       "properties": {
-        "Id": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "Name": {
-          "type": "string"
-        },
-        "Category": {
-          "type": "string"
-        },
-        "Price": {
-          "type": "number",
-          "format": "double"
-        }
+        "Id":       { "type": "integer" },
+        "Name":     { "type": "string"  },
+        "Category": { "type": "string"  },
+        "Price":    { "type": "number"  }
       }
     }
   }
