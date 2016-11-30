@@ -140,7 +140,7 @@ public static void Register(HttpConfiguration config)
             ...
             
             /* Call SwaggerGen */
-            __var swaggerSpec = new SwaggerGen(config).GenerateSwagger();___
+            var swaggerSpec = new SwaggerGen(config).GenerateSwagger();
             ...
         }
     }
