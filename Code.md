@@ -128,13 +128,9 @@ public static void Register(HttpConfiguration config)
 
 
 ```csharp
-    public class NetworkingServiceStartup
+    public class NetworkingServiceSetup
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NetworkingServiceStartup"/> class.
-        /// </summary>
-        /// <param name="config">The HTTP configuration.</param>
-        public NetworkingServiceStartup(HttpConfiguration config)
+        public NetworkingServiceSetup(HttpConfiguration config)
         {
             // Configure the formatters so we don't output XML
             config.Formatters.ConfigureDefaultResourceProviderFormatters();
