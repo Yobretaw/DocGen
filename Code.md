@@ -198,9 +198,6 @@ public class LogicalSubnetResourceController : ApiController
             "schema": {
               "ref": "#/definitions/Product"
             }
-          },
-          "404": {
-            "description": "Not Found"
           }
         }
       }
