@@ -90,3 +90,22 @@ PS C:\> Get-LogicalSubnet -LogicalSubnetName "f8f67956-3906-4303-94c5-09cf91e7e3
     Properties : Microsoft.AzureStack.FabricResourceProvider.ClientModel.LogicalNetwo
                  rk
 ```
+
+
+```csharp
+var networkingServiceHost = new ServiceHost<NetworkingService<InProcDependencySet>>(config, baseUrl);
+
+/* Start server */
+Task.Run(async() =>
+{
+    await networkingServiceHost.Start();
+}).Wait();
+
+/* extract HttpConfiguration */
+var httpConfig = networkingServiceHost
+    .GetPrivateField("serviceLifecycle")
+    .GetPrivateField("host")
+    .GetProperty<HttpConfiguration>("HttpConfiguration");
+
+var swaggerDoc = new SwaggerGen(httpConfig).Generate();
+```
