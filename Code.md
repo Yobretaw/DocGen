@@ -108,3 +108,18 @@ var httpConfig = networkingServiceHost
 var swaggerSpec = new SwaggerGen(httpConfig).GenerateSwagger();
 ...
 ```
+
+```csharp
+public static void Register(HttpConfiguration config)
+{
+    config.MapHttpAttributeRoutes();
+    config.Routes.MapHttpRoute(
+        name: "DefaultApi",
+        routeTemplate: "api/{controller}/{id}",
+        defaults: new { id = RouteParameter.Optional }
+    );
+    
+    var swaggerSpec = new SwaggerGen(config).GenerateSwagger();
+    ...
+}
+```
