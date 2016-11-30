@@ -95,7 +95,7 @@ Properties : Microsoft.AzureStack.FabricResourceProvider.ClientModel.LogicalNetw
 
 
 ```csharp
-var networkingServiceHost = new ServiceHost<NetworkingService<InProcDependencySet>>(config, baseUrl);
+var networkingServiceHost = /* Code to creat a service host */
 
 /* Start server */
 Task.Run(async() => await networkingServiceHost.Start()).Wait();
