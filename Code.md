@@ -134,7 +134,7 @@ public static void Register(HttpConfiguration config)
             /* Your configuration goes here */
             ...
             
-            /* Call SwaggerGen */
+            /* Call SwaggerGen to generate Swagger spec */
             var swaggerSpec = new SwaggerGen(config).GenerateSwagger();
             ...
         }
