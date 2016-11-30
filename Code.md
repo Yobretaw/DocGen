@@ -130,9 +130,9 @@ public static void Register(HttpConfiguration config)
 
 
 ```csharp
-    public class NetworkingServiceSetup
+    public class ApiSetup
     {
-        public NetworkingServiceSetup(HttpConfiguration config)
+        public ApiSetup(HttpConfiguration config)
         {
             /* Your configuration goes here */
             ...
