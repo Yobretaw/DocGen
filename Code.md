@@ -10,11 +10,6 @@ namespace ProductsApp.Controllers
             new Product { Id = 3, Name = "Hammer", Category = "Hardware", Price = 16.99 } 
         };
 
-        public IEnumerable<Product> GetAllProducts()
-        {
-            return products;
-        }
-
         public IHttpActionResult GetProduct(int id)
         {
             var product = products.FirstOrDefault((p) => p.Id == id);
@@ -23,6 +18,11 @@ namespace ProductsApp.Controllers
                 return NotFound();
             }
             return Ok(product);
+        }
+        
+        public IEnumerable<Product> GetAllProducts()
+        {
+            return products;
         }
     }
 }
