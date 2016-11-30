@@ -96,10 +96,7 @@ PS C:\> Get-LogicalSubnet -LogicalSubnetName "f8f67956-3906-4303-94c5-09cf91e7e3
 var networkingServiceHost = new ServiceHost<NetworkingService<InProcDependencySet>>(config, baseUrl);
 
 /* Start server */
-Task.Run(async() =>
-{
-    await networkingServiceHost.Start();
-}).Wait();
+Task.Run(async() => await networkingServiceHost.Start()).Wait();
 
 /* extract HttpConfiguration */
 var httpConfig = networkingServiceHost
@@ -107,5 +104,6 @@ var httpConfig = networkingServiceHost
     .GetPrivateField("host")
     .GetProperty<HttpConfiguration>("HttpConfiguration");
 
+/* call SwaggerGen */
 var swaggerDoc = new SwaggerGen(httpConfig).Generate();
 ```
