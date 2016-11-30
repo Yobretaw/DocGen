@@ -64,7 +64,7 @@ namespace ProductsApp
 
 
 ```csharp
-namespace ProductsApp.Controllers
+namespace Microsoft.AzureStack.Services.Fabric.ResourceProvider.NetworkingService.Controllers
 {
     public class LogicalSubnetResourceController : ApiController
     {
