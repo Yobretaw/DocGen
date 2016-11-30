@@ -162,7 +162,7 @@ public class LogicalSubnetResourceController : ApiController
 
 public class LogicalSubnetResourceController : ApiController
 {
-    [ResponseType(typeof(LogicalSubset))]
+    [ResponseType(typeof(LogicalSubnet))]
     public IHttpActionResult GetLogicalSubnet(string logicSubnetName)
     {
         ...
