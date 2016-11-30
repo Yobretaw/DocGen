@@ -101,10 +101,7 @@ var networkingServiceHost = new ServiceHost<NetworkingService<InProcDependencySe
 Task.Run(async() => await networkingServiceHost.Start()).Wait();
 
 /* Extract HttpConfiguration via reflection */
-var httpConfig = networkingServiceHost
-    .GetPrivateField("serviceLifecycle")
-    .GetPrivateField("host")
-    .GetProperty<HttpConfiguration>("HttpConfiguration");
+var httpConfig = /* Code to extract HttpConfiguration */
 
 /* Call SwaggerGen to generate Swagger spec */
 var swaggerSpec = new SwaggerGen(httpConfig).GenerateSwagger();
