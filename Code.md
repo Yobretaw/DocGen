@@ -125,3 +125,46 @@ public static void Register(HttpConfiguration config)
     ...
 }
 ```
+
+
+```csharp
+    public class NetworkingServiceStartup
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NetworkingServiceStartup"/> class.
+        /// </summary>
+        /// <param name="config">The HTTP configuration.</param>
+        public NetworkingServiceStartup(HttpConfiguration config)
+        {
+            // Configure the formatters so we don't output XML
+            config.Formatters.ConfigureDefaultResourceProviderFormatters();
+
+            // We use a custom resolver because our controller are abstracts and would not be discovered by the default one.
+            config.Services.Replace(typeof(IHttpControllerTypeResolver), new ResourceProviderHttpControllerTypeResolver());
+
+            // We use a custom assemblies resolver to ensure all the DLLs are loaded.
+            config.Services.Replace(typeof(IAssembliesResolver), new ResourceProviderAssembliesResolver("Microsoft.AzureStack.*.NetworkingService.Controllers.*.dll"));
+
+            // We use a custom action selector, so that we can verify the api-version is supported for the method.
+            config.Services.Replace(typeof(IHttpActionSelector), new ResourceProviderActionControllerSelector());
+
+            // Map the HTTP attribute routes using our custom route provider to handle the resource type parameter
+            config.MapHttpAttributeRoutes(new ResourceProviderDirectRouteProvider());
+
+            // Tracing handler.
+            var handler = new TracingHandler();
+            config.MessageHandlers.Insert(0, handler);
+
+            // Authorization handler.
+            var authHandler = new NoAuthMessageHandler();
+            config.MessageHandlers.Insert(1, authHandler);
+
+            // Exception filter
+            config.Filters.Add(new UnhandledExceptionFilterAttribute());
+
+            config.EnsureInitialized();
+
+            this.WebApiConfiguration = config;
+        }
+    }
+```
