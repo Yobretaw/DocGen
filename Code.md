@@ -132,7 +132,7 @@ public static void Register(HttpConfiguration config)
 ```csharp
     public class ApiSetup
     {
-        public ApiSetup(HttpConfiguration config)
+        public Register(HttpConfiguration config)
         {
             /* Your configuration goes here */
             ...
