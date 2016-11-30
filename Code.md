@@ -138,14 +138,9 @@ public static void Register(HttpConfiguration config)
             config.Formatters.ConfigureDefaultResourceProviderFormatters();
             
             ...
-
-            // Exception filter
-            config.Filters.Add(new UnhandledExceptionFilterAttribute());
-            
-            this.WebApiConfiguration = config;
             
             /* Call SwaggerGen */
-            var swaggerSpec = new SwaggerGen(config).GenerateSwagger();
+            __var swaggerSpec = new SwaggerGen(config).GenerateSwagger();___
             ...
         }
     }
