@@ -82,7 +82,7 @@ PS C:\> Get-LogicalSubnet -LogicalSubnetName "f8f67956-3906-4303-94c5-09cf91e7e3
 
     Id         : /subscriptions/B6940E9A-5969-41EC-B6B1-C3575D19F067/resourceGroups/s
                  ystem/providers/Microsoft.Fabric.Admin/fabricLocations/local/logical
-                 Networks/00000000-2222-1111-9999-000000000001
+                 Networks/f8f67956-3906-4303-94c5-09cf91e7e311
     Name       : f8f67956-3906-4303-94c5-09cf91e7e311
     Type       : Microsoft.Fabric.Admin/fabricLocations/logicalNetworks
     Location   : local
