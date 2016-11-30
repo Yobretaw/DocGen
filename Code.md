@@ -149,3 +149,23 @@ public static void Register(HttpConfiguration config)
         }
     }
 ```
+
+
+```csharp
+public class LogicalSubnetResourceController : ApiController
+{
+    public IHttpActionResult GetLogicalSubnet(string logicSubnetName)
+    {
+        ...
+    }
+}
+
+public class LogicalSubnetResourceController : ApiController
+{
+    [ResponseType(typeof(LogicalSubset))]
+    public IHttpActionResult GetLogicalSubnet(string logicSubnetName)
+    {
+        ...
+    }
+}
+```
