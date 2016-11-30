@@ -66,16 +66,11 @@ namespace ProductsApp
 ```csharp
 namespace ProductsApp.Controllers
 {
-    public class ProductsController : ApiController
+    public class LogicalSubnetResourceController : ApiController
     {
-        public IHttpActionResult GetProduct(int id)
+        public IHttpActionResult GetLogicalSubnet(int logicSubnetName)
         {
-            var product = products.FirstOrDefault((p) => p.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return Ok(product);
+            ...
         }
     }
 }
