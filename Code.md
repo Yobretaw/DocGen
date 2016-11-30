@@ -119,6 +119,8 @@ public static void Register(HttpConfiguration config)
         defaults: new { id = RouteParameter.Optional }
     );
     
+    ...
+    
     var swaggerSpec = new SwaggerGen(config).GenerateSwagger();
     ...
 }
