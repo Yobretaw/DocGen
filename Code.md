@@ -78,7 +78,6 @@ namespace Fabric.ResourceProvider.NetworkingService.Controllers
 
 
 ```powershell
-PS C:\> $subnet = Get-LogicalSubnet -LogicalSubnetName "1234567890"
-PS C:\> $subnet
-    ...
+PS C:\> Get-LogicalSubnet -LogicalSubnetName "1234567890"
+...
 ```
