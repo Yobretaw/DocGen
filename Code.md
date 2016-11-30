@@ -105,6 +105,6 @@ var httpConfig = networkingServiceHost
     .GetProperty<HttpConfiguration>("HttpConfiguration");
 
 /* Call SwaggerGen to generate Swagger spec */
-var swaggerSpec = new SwaggerGen(httpConfig).Generate();
+var swaggerSpec = new SwaggerGen(httpConfig).GenerateSwagger();
 ...
 ```
