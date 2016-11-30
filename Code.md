@@ -68,7 +68,7 @@ namespace Microsoft.AzureStack.Services.Fabric.ResourceProvider.NetworkingServic
 {
     public class LogicalSubnetResourceController : ApiController
     {
-        public IHttpActionResult GetLogicalSubnet(int logicSubnetName)
+        public IHttpActionResult GetLogicalSubnet(string logicSubnetName)
         {
             ...
         }
