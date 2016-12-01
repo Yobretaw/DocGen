@@ -78,7 +78,7 @@ namespace Fabric.ResourceProvider.NetworkingService.Controllers
 
 
 ```powershell
-PS C:\> Import-Module AzureStackFabricResourceProvider.psm1
+PS C:\> Import-Module AzureStackFRP.psm1
 PS C:\> Get-LogicalSubnet -LogicalSubnetName "f8f67956-3906-4303-94c5-09cf91e7e311"
 
 Id         : /subscriptions/B6940E9A-5969-41EC-B6B1-C3575D19F067/resourceGroups/s
